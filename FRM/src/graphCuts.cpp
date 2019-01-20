@@ -73,7 +73,7 @@ void FRM(Image<float> src[],int n, float b){
 					g.add_edge(getNodeNum(k + 1, i, j), getNodeNum(k + 1, i, j + 1), C, C); // down neighbor
 				}
 				if (k != SIZ - 1) {
-					g.add_edge(getNodeNum(k + 1, i, j), getNodeNum(k + 1, i, j + 1), float(gFunc_laplace(src_laplace[k].at<uchar>(j, i), b)), float(gFunc_laplace(src_laplace[k].at<uchar>(j, i), b))); // lower image neighbor
+					g.add_edge(getNodeNum(k + 1, i, j), getNodeNum(k + 2, i, j), float(gFunc_laplace(src_laplace[k].at<uchar>(j, i), b)), float(gFunc_laplace(src_laplace[k].at<uchar>(j, i), b))); // lower image neighbor
 				}
 			}
 		}
