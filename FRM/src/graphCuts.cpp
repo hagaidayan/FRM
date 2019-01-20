@@ -63,7 +63,7 @@ void FRM(Image<float> src[],int n, float b){
 			g.add_tweights(getNodeNum(n, i, j), 0, float(gFunc_laplace(src_laplace[n - 1].at<uchar>(j, i), b)));
 		}
 	}
-	for (int k = 0; k < SIZ; k++) {
+	for (int k = 0; k < SIZ; k++) {// add in-image edges
 		for (int i = 0; i < WID; i++) {
 			for (int j = 0; j < HEI; j++) {
 				if (i != WID - 1) {
